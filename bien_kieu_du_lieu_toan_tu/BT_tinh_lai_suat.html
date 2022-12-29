@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let money, year, interset;
+        money = parseInt(prompt("số tiền cần gửi"));
+        year = parseInt(prompt("số năm gửi"));
+        interset = parseFloat(prompt("lãi suất"));
+
+        let total = money + year * (money * interset); 
+         alert(`sau ${year} năm, số tiền nhân được là: ${total}`);
+         document.write("tong: " + total);
+    </script>
+</body>
+</html>
