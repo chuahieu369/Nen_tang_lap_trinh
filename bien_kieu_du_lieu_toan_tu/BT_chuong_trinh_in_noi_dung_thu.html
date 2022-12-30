@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chuong trinh in noi dung thu</title>
+</head>
+<body>
+   
+    <div>
+        Tên: <input id="ten" />
+        <br>
+        Địa điểm <input id="diadiem" />
+        <br>
+        Ngày: <input id="ngay" type="number" min="1" max="31" />
+        <br>
+        Tháng:<input id="thang" type="number" min="1" max="12"/>
+        <br>
+        Năm: <input id="nam" type="number"/> 
+    </div>
+    <button type="button" onclick="xulyhienthi()">Hiển thị</button>
+    <h2>
+
+        <div id="Ten"></div> 
+        <br><br><br>
+        Em không biết phải nói sao để anh hiểu rằng, em nhớ anh thật nhiều. Em yêu anh đến khi trái tim này tan thành nghìn mảnh. Tất cả những gì em yêu thương, em khát khao và cần đến, chính là anh, mãi mãi về sau. Em chỉ muốn ở bên anh, và anh yêu hỡi, em sẽ trở thành người phụ nữ như anh mong muốn.
+        <br><br>
+        Có phải em thật tệ hại, khi cứ nghĩ đến anh thật nhiều, thật lâu và nhất là mỗi khi đêm xuống? Em hứa sẽ sẽ cố gắng triệu triệu lần hơn thế. Nhưng hơn tất cả, em chỉ mong một ngày nào đó, anh sẽ tự hào về em, như tự hào về vợ của anh, và mẹ của các con anh (ít nhất là 2 nhé, em vừa mới quyết định đấy!). Em nhớ thật nhiều cảm giác mỗi đêm anh ôm em và ru em ngủ trong vòng tay. Đêm nay, em chỉ muốn được gần bên anh… và anh biết không, trái tim em đang đau đớn đến nhường nào.
+        <br><br>
+        Anh yêu thương, đừng bao giờ rời xa em nữa nhé. Yêu anh rất nhiều.
+        <br><br><br>
+         <div id="ngayviet"></div>
+        
+    </h2>
+    <script>
+        function xulyhienthi(){
+           {
+            
+            let sngay = document.getElementById("ngay").value;
+            let sthang = document.getElementById("thang").value;
+            let snam = document.getElementById("nam").value;
+            let D = document.getElementById("diadiem").value;
+
+            let  Ketqua = D + ", ngày " + sngay + " tháng " + sthang + " năm " + snam;
+            document.getElementById("ngayviet").innerHTML = Ketqua; 
+            
+            document
+           
+           }{
+            let tten = document.getElementById("ten").value;
+            
+            let tennguoinhan = tten;
+            document.getElementById("Ten").innerHTML = tennguoinhan + " thuơng nhớ!";
+           }
+
+        }
+    </script>
+    
+    
+
+</body>
+</html>
