@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        Nhập số:<br>
+        <input id="so_nhap" type="number"/>
+        <button type="button" onclick="ktschan()">Kiểm tra</button>
+    </div>
+    <script>
+        function ktschan(){
+            let giatri = document.getElementById("so_nhap").value;
+            let thongbao = `bạn vừa nhập số ${giatri}\n`;
+            // let thongbao = '';
+
+            // if (thongbao !== ''){
+            let sodu = giatri % 2;
+            
+            if(sodu === 0){
+                thongbao += `${giatri} là số chẵn`;
+            }else{
+                thongbao += `${giatri} là số lẻ`;
+            }
+            
+            alert(thongbao);
+        
+
+        }
+
+    </script>
+</body>
+</html>
