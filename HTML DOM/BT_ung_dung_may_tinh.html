@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ứng dụng máy tính</title>
+</head>
+<body>
+    <form>
+      <p>
+        <h3>Calculator</h3>
+         <input type="number" id="sohang1"/>
+         <input type="number" id="sohang2"/>
+      </p>
+        <button type="button" onclick="xulytinhtoan('+')">Addition (+)</button>
+        <button type="button" onclick="xulytinhtoan('-')">Subtraction (-)</button>
+        <button type="button" onclick="xulytinhtoan('x')">Multiplication (x)</button>
+        <button type="button" onclick="xulytinhtoan('/')">Division (/)</button>
+        <div id="ketqua" style="color: green;"></div>
+
+    </form>
+    <script>
+        function xulytinhtoan(pheptoan){
+            // alert(pheptoan);
+            let so1 = document.getElementById("sohang1").value;
+            let so2 = document.getElementById("sohang2").value;
+         
+            if(so1 !== '' && so2 !== ''){
+                let giatri = 0;
+
+                if (pheptoan === "+"){
+                    giatri = parseFloat(so1) + parseFloat(so2);
+                }else if (pheptoan === "/"){
+                    giatri = parseFloat(so1) / parseFloat(so2);
+                }else if (pheptoan === "-"){
+                    giatri = parseFloat(so1) - parseFloat(so2);
+                }else if (pheptoan === "x"){
+                    giatri = parseFloat(so1) * parseFloat(so2);
+                }
+                document.getElementById("ketqua").innerHTML = giatri;
+            }
+
+        }
+           
+           
+           
+           
+           
+           
+            // function cong(pheptoan){
+                //...
+            //    let giatri = "kết quả là: " + parseInt(so1) + parseInt(so2);
+            //    document.getElementById("ketqua").innerHTML = giatri;  
+            // }
+        // }
+        
+    </script>
+</body>
+</html>
