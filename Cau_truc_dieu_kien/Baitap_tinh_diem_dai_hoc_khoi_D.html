@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tinh_diem_dai_hoc_khoi_D</title>
+</head>
+<body>
+    <h2>TÍNH ĐIỂM ĐẠI HỌC KHỐI D</h2>
+    <form>
+        Môn Toán <input id="toan" type="number" min="0" max="10" style="margin-left: 25px;"/><br><br>  
+        Môn Văn  <input id="van" type="number" min="0" max="10" style="margin-left: 30px;"/><br><br> 
+        Môn Anh  <input id="anh" type="number" min="0" max="10" style="margin-left: 30px;"/><br><br> 
+        Khu vực  <select id="khuvuc" style="margin-left: 37px;">
+                   <option>KV1</option>
+                   <option>KV2</option>
+                   <option>KV2-NT</option>
+                   <option>KV3</option>
+                 </select>
+        <br><br>
+        <button type="button" onclick="tinhdiem()" >tính điểm</button>
+    </form>
+    <h2><div id="ketqua"></div></h2>
+    
+    <script>
+       function tinhdiem(){
+         let toan = document.getElementById("toan").value;
+         let van = document.getElementById("van").value;
+         let anh = document.getElementById("anh").value;  
+         let khuvuc = document.getElementById("khuvuc").value; 
+                  
+         toan = parseFloat(toan);
+         van = parseFloat(van);
+         anh = parseFloat(anh);
+                
+         let tong;
+         let chuoi = '';        
+
+         switch(khuvuc){
+            case 'KV1':
+                tong = 0.75 + toan + van + anh; break; 
+            case 'KV2':    
+                tong = 0.2 +  toan + van + anh; break;
+            case 'KV2-NT':    
+                tong = 0.5 +  toan + van + anh; break;
+            case 'KV3':    
+                tong =  toan + van + anh; break;    
+            default:
+              tong = 0;
+         }
+         chuoi += `Tổng điểm ĐH khối D của bạn là: ${tong}`
+                
+                document.getElementById("ketqua").innerHTML = chuoi;
+       }
+    </script>
+</body>
+</html>
