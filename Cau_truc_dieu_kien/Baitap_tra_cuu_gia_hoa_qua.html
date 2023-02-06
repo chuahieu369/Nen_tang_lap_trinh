@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tra_cuu_gia_hoa_qua</title>
+</head>
+<body>
+    <h2>GIÁ HOA QUẢ</h2>
+    <form>
+        <input id="qua" type="text"/>
+        <br><br>
+        <button type="button" onclick="kiemtragia()" style="margin-left: 50px;">Kiểm tra</button>
+    </form>
+
+    <h2><div id="ketqua"></div></h2>
+
+    <script>
+        
+        function kiemtragia(){
+            let qua = document.getElementById("qua").value;
+         
+            let gia;
+            let chuoi = '';
+                
+                switch (qua){
+                    case 'Ổi':  
+                       gia = 20000; break;
+                    case 'Dưa Hấu':  
+                       gia = 20000; break;
+                    case 'Táo':  
+                       gia = 30000; break;
+                    case 'Xoài':  
+                       gia = 30000; break;
+                    case 'Cam':  
+                       gia = 40000; break;
+                    case 'Chôm Chôm':  
+                       gia = 40000; break;
+                    case 'Măng Cụt':  
+                       gia = 50000; break;
+                   
+                    default: 
+                        alert("HẾT HÀNG"); break;    
+                }
+                chuoi += `<br>${gia} VNĐ/kg`
+                
+                document.getElementById("ketqua").innerHTML = chuoi;
+            
+       }        
+    </script>
+</body>
+</html>
