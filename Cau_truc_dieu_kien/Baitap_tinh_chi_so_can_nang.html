@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMIcalculator</title>
+</head>
+<body>
+    <script>
+        let chieucao = prompt("Nhập chiều cao (m):")
+        let cannang = prompt("Nhập cân nặng (kg):")
+
+            chieucao = parseFloat(chieucao);
+            cannang = parseFloat(cannang);
+
+            let BMI = cannang / (chieucao * chieucao);
+            console.log(BMI);
+            let result = '';
+
+            if(cannang !== null && chieucao !== null){
+                if (BMI < 16){
+                    result = "gầy độ III";
+                } else if (BMI < 17){
+                    result = "gầy độ II";
+                } else if (BMI < 18.5){
+                    result = "gầy độ I";
+                } else if (BMI < 25){
+                    result = "bình thường";
+                } else if (BMI < 30){
+                    result = "thừa cân";
+                } else if (BMI < 35){
+                    result = "béo phì độ I";
+                } else if (BMI < 40){
+                    result = "béo phì độ II";
+                } else if (BMI > 40){
+                    result = "béo phì độ III";
+                }
+            }
+            
+            alert(result);
+    </script>
+</body>
+</html>
