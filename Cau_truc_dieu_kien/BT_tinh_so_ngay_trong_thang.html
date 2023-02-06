@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tinh_so_ngay_trong_thang</title>
+</head>
+<body>
+    <h2>KIỂM TRA SỐ NGÀY TRONG THÁNG</h2>
+    <form>
+        Tháng: <input id="thang" type="number" min="1" max="12"/>
+        <br><br>
+        <button type="button" onclick="kiemtrathang()" style="margin-left: 50px;">Kiểm tra</button>
+    </form>
+
+    <div id="ketqua"></div>
+
+    <script>
+        
+        function kiemtrathang(){
+            let thang = document.getElementById("thang").value;
+        
+            if (thang != ''){
+            thang = parseInt(thang);
+            
+            let soNgay;
+            let chuoi = '';
+                
+                switch (thang){
+                    case 1: case 3: case 5: case 7: case 8: case 10: case 12: 
+                       soNgay = 31; break;
+              
+                    case 4: case 6: case 9: case 11: 
+                       soNgay = 30; break;
+                    
+                    case 2: 
+                        soNgay = "28 hoặc 29"; break;
+                    
+                    default: 
+                        soNgay = 0; break;    
+                }
+                chuoi += `<br>Tháng ${thang} có ${soNgay} ngày.`
+                
+                document.getElementById("ketqua").innerHTML = chuoi;
+            } else {
+                alert("vui lòng nhập tháng")
+            }    
+        }        
+    </script>
+</body>
+</html>
