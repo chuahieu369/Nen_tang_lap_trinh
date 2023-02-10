@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UDMTBT</title>
+</head>
+<body>
+    <h2>MÁY TÍNH CẦM TAY</h2>
+    A <input id="so1" type="number"/>
+    B <input id="so2" type="number"/><br><br>
+    <button type="button" onclick="xu_ly('+')" style="margin-left: 15px;">Phép cộng</button>
+    <button type="button" onclick="xu_ly('-')" style="margin-left: 20px;">Phép trừ</button>
+    <button type="button" onclick="xu_ly('*')" style="margin-left: 20px;">Phép nhân</button>
+    <button type="button" onclick="xu_ly('/')" style="margin-left: 20px;">Phép chia</button>
+    <h2><div id="hienthi" style="color: red;"></div></h2>
+    <script>
+        function xu_ly(pheptoan){
+            let A = document.getElementById('so1').value;
+            let B = document.getElementById('so2').value;
+
+            if(A !== '' && B !== ''){
+                let ketqua = 0;
+                // alert(pheptoan)
+                if (pheptoan === "+"){
+                    ketqua = parseFloat(A) + parseFloat(B);
+                } if (pheptoan === "-"){
+                    ketqua = parseFloat(A) - parseFloat(B);
+                } if (pheptoan === "*"){
+                    ketqua = parseFloat(A) * parseFloat(B);
+                } if (pheptoan === "/"){
+                    ketqua = parseFloat(A) / parseFloat(B);
+                }
+                document.getElementById("hienthi").innerHTML = ketqua;
+            }
+        }
+    </script>
+</body>
+</html>
